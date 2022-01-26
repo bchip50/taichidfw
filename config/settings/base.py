@@ -10,7 +10,7 @@ ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 APPS_DIR = ROOT_DIR / "taichidfw"
 env = environ.Env()
 
-READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=True)
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
     env.read_env(str(ROOT_DIR / ".env"))
@@ -67,6 +67,10 @@ DJANGO_APPS = [
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
     "django.forms",
+    "phone_field",
+    "django_google_maps",
+    "taggit",
+    "taggit_templatetags2",
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -78,6 +82,9 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "taichidfw.users",
+    "taichidfw.locations",
+    "taichidfw.resources",
+    "taichidfw.styles",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -271,3 +278,4 @@ SOCIALACCOUNT_ADAPTER = "taichidfw.users.adapters.SocialAccountAdapter"
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+GOOGLE_MAPS_API_KEY = "AIzaSyBLDpTM3c50sCj3Pw4Yo7Giju-adzTBbbE"

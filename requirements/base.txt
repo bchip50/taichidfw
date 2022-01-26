@@ -15,3 +15,26 @@ django-allauth==0.47.0  # https://github.com/pennersr/django-allauth
 django-crispy-forms==1.13.0  # https://github.com/django-crispy-forms/django-crispy-forms
 crispy-bootstrap5==0.6  # https://github.com/django-crispy-forms/crispy-bootstrap5
 django-redis==5.2.0  # https://github.com/jazzband/django-redis
+django-classy-tags
+django-google-maps
+django-lifecycle
+django-phone-field
+django-taggit
+django-taggit-templatetags2
+
+# Third Party libraries
+decorator
+docutils
+Faker
+filelock
+identify
+idna
+imagesize
+iniconfig
+isort
+lazy-object-proxy
+livereload
+MarkupSafe
+psycopg2-binary
+python-slugify
+pytz
